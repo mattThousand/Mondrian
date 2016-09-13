@@ -10,6 +10,8 @@
 		B54567CF1D83A22F00C9109D /* Mondrian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54567C51D83A22F00C9109D /* Mondrian.framework */; };
 		B54567D41D83A22F00C9109D /* MondrianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54567D31D83A22F00C9109D /* MondrianTests.swift */; };
 		B54567D61D83A22F00C9109D /* Mondrian.h in Headers */ = {isa = PBXBuildFile; fileRef = B54567C81D83A22F00C9109D /* Mondrian.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B556B42F1D88C11A001B6FE2 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556B42E1D88C11A001B6FE2 /* CGRect+Extensions.swift */; };
+		B574D0CF1D8472F00034D12B /* Partitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574D0CE1D8472F00034D12B /* Partitionable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		B54567CE1D83A22F00C9109D /* MondrianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MondrianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54567D31D83A22F00C9109D /* MondrianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MondrianTests.swift; sourceTree = "<group>"; };
 		B54567D51D83A22F00C9109D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B556B42E1D88C11A001B6FE2 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		B574D0CE1D8472F00034D12B /* Partitionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partitionable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				B54567C81D83A22F00C9109D /* Mondrian.h */,
 				B54567C91D83A22F00C9109D /* Info.plist */,
+				B556B42E1D88C11A001B6FE2 /* CGRect+Extensions.swift */,
+				B574D0CE1D8472F00034D12B /* Partitionable.swift */,
 			);
 			path = Mondrian;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 					B54567C41D83A22F00C9109D = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8LHVT7DW44;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					B54567CD1D83A22F00C9109D = {
@@ -198,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B556B42F1D88C11A001B6FE2 /* CGRect+Extensions.swift in Sources */,
+				B574D0CF1D8472F00034D12B /* Partitionable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +331,7 @@
 		B54567DA1D83A22F00C9109D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8LHVT7DW44;
@@ -334,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nicethings.Mondrian;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +352,7 @@
 		B54567DB1D83A22F00C9109D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 8LHVT7DW44;
@@ -360,6 +372,7 @@
 		B54567DD1D83A22F00C9109D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8LHVT7DW44;
 				INFOPLIST_FILE = MondrianTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +385,7 @@
 		B54567DE1D83A22F00C9109D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8LHVT7DW44;
 				INFOPLIST_FILE = MondrianTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +414,7 @@
 				B54567DB1D83A22F00C9109D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B54567DC1D83A22F00C9109D /* Build configuration list for PBXNativeTarget "MondrianTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +423,7 @@
 				B54567DE1D83A22F00C9109D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
