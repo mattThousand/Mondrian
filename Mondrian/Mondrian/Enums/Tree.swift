@@ -1,13 +1,12 @@
 //
-//  Partitionable.swift
+//  Tree.swift
 //  Mondrian
 //
-//  Created by Matthew Buckley on 9/10/16.
+//  Created by Matthew Buckley on 9/13/16.
 //  Copyright © 2016 Nice Things. All rights reserved.
 //
 
 import Foundation
-import UIKit
 
 public enum Tree<NodeData: Comparable> {
     case empty
@@ -22,24 +21,6 @@ public enum Tree<NodeData: Comparable> {
             return left.leafNodes + [value] + right.leafNodes
         }
     }
-
-}
-
-public protocol TreeRepresentable {
-
-    associatedtype NodeData: Comparable
-
-}
-
-public extension TreeRepresentable {
-
-    static func treeRepresentation(withRootValue rootValue: NodeData) -> Tree<NodeData> {
-        return Tree.cons(Tree.empty, rootValue, Tree.empty)
-    }
-
-}
-
-public protocol Partitionable: TreeRepresentable {
 
 }
 
@@ -60,22 +41,6 @@ public extension Tree {
             return childNodes.0 > minValue || childNodes.1 > minValue ? Tree.cons(leftNode.partitioned(usingTransform: transform, minValue: minValue), parent, rightNode.partitioned(usingTransform: transform, minValue: minValue)) : self
         }
 
-    }
-
-}
-
-public extension Partitionable {
-
-    // this is a tree, should simply add 2 nodes to the current node
-    public static func partitioned(withRootValue rootValue: NodeData, transform: (NodeData) -> (NodeData, NodeData), minValue: NodeData) -> [NodeData] {
-        let tree = treeRepresentation(withRootValue: rootValue)
-        switch tree {
-        case .empty:
-            return []
-        case .cons(_, _, _):
-            return tree.partitioned(usingTransform: transform, minValue: minValue).leafNodes
-
-        }
     }
 
 }

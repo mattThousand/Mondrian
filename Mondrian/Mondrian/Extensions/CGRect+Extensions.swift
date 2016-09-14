@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension CGRect: Comparable {
 
@@ -40,9 +41,3 @@ extension CGRect: Partitionable {
 }
 
 
-public protocol Numeric {}
-
-extension CGFloat: Numeric {}
-extension Double: Numeric {}
-extension Float: Numeric {}
-extension Int: Numeric {}
