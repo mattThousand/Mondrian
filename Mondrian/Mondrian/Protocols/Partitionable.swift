@@ -19,7 +19,6 @@ public extension Partitionable {
             return []
         case .cons(_, _, _):
             return tree.partitioned(usingTransform: transform, minValue: minValue).leafNodes
-
         }
     }
 

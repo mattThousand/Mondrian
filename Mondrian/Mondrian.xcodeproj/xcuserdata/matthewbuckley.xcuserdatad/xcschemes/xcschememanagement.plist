@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mondrian Example.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Mondrian.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>B54567CD1D83A22F00C9109D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B54ACB0F1D89D71D00E0B71E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B54ACB221D89D71E00E0B71E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

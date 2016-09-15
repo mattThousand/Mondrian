@@ -18,7 +18,12 @@ public enum Tree<NodeData: Comparable> {
         case .empty:
             return []
         case .cons(let left, let value, let right):
-            return left.leafNodes + [value] + right.leafNodes
+            switch (left, right) {
+            case (.empty, .empty):
+                return [value]
+            default:
+                return left.leafNodes + right.leafNodes
+            }
         }
     }
 
@@ -38,7 +43,7 @@ public extension Tree {
             let leftNode = Tree.cons(Tree.empty, childNodes.0, Tree.empty)
             let rightNode = Tree.cons(Tree.empty, childNodes.1, Tree.empty)
 
-            return childNodes.0 > minValue || childNodes.1 > minValue ? Tree.cons(leftNode.partitioned(usingTransform: transform, minValue: minValue), parent, rightNode.partitioned(usingTransform: transform, minValue: minValue)) : self
+            return childNodes.0 > minValue && childNodes.1 > minValue ? Tree.cons(leftNode.partitioned(usingTransform: transform, minValue: minValue), parent, rightNode.partitioned(usingTransform: transform, minValue: minValue)) : self
         }
 
     }
