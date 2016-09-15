@@ -32,7 +32,7 @@ public enum Tree<NodeData: Comparable> {
 public extension Tree {
 
     // this is a tree, should simply add 2 nodes to the current node
-    public func partitioned(usingTransform transform: (NodeData) -> (NodeData, NodeData), minValue: NodeData) -> Tree<NodeData> {
+    public func partitioned(usingTransform transform: (NodeData) -> (NodeData, NodeData)) -> Tree<NodeData> {
 
         switch self {
         case .empty:
@@ -43,7 +43,7 @@ public extension Tree {
             let leftNode = Tree.cons(Tree.empty, childNodes.0, Tree.empty)
             let rightNode = Tree.cons(Tree.empty, childNodes.1, Tree.empty)
 
-            return childNodes.0 > minValue && childNodes.1 > minValue ? Tree.cons(leftNode.partitioned(usingTransform: transform, minValue: minValue), parent, rightNode.partitioned(usingTransform: transform, minValue: minValue)) : self
+            return Tree.cons(leftNode, parent, rightNode)
         }
 
     }
