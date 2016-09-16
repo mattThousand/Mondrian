@@ -26,12 +26,12 @@ final class ViewController: UIViewController {
 
         let viewRect = view.frame
 
-        let tableau1 = CGRect.partitioned(withRootValue: viewRect, nodeTransform: { (parent) -> (CGRect, CGRect) in
-
+        let tableau1 = CGRect.partitioned(withRootValue: viewRect, minValue: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0)) { (parent) -> (CGRect, CGRect) in
+            
             var c1 = CGRect.zero
             var c2 = CGRect.zero
             var bisectPt: CGFloat = 0.0
-
+            
             if arc4random() % 2 == 0 {
                 bisectPt = parent.height / CGFloat(arc4random_uniform(4) + 2)
                 c1 = CGRect(origin: parent.origin, size: CGSize(width: parent.width, height: parent.height - bisectPt))
@@ -41,10 +41,10 @@ final class ViewController: UIViewController {
                 c1 = CGRect(origin: parent.origin, size: CGSize(width: parent.width - bisectPt, height: parent.height))
                 c2 = CGRect(origin: CGPoint(x: c1.maxX, y: c1.minY), size: CGSize(width: bisectPt, height: parent.height))
             }
-
-
+            
+            
             return (c1, c2)
-            }, minValue: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0))
+        }
 
         var idx = tileColors.count - 1
         for tile in tableau1 {

@@ -9,10 +9,11 @@
 import Foundation
 
 public enum Tree<NodeData: Comparable> {
+
     case empty
     indirect case cons(Tree<NodeData>, NodeData, Tree<NodeData>)
 
-
+    /// A collection containing the values of the leaf nodes of the tree
     var leafNodes: [NodeData] {
         switch self {
         case .empty:
@@ -31,12 +32,20 @@ public enum Tree<NodeData: Comparable> {
 
 public extension Tree {
 
-    // this is a tree, should simply add 2 nodes to the current node
-    public func partitioned(usingTransform transform: (NodeData) -> (NodeData, NodeData)) -> Tree<NodeData> {
+    /// Computes a new tree where the leaf nodes are transformations of the root node
+    ///
+    /// - parameter transform: a transformation function that takes NodeData as input and returns a transformed tuple of (NodeData, NodeData)
+    ///
+    /// - throws: this function throws an error of type MondrianError
+    ///
+    /// - returns: a new Tree where the leaf nodes are transformations of the root node
+    public func partitioned(usingTransform transform: (NodeData)
+        -> (NodeData, NodeData)) throws
+        -> Tree<NodeData> {
 
         switch self {
         case .empty:
-            return self
+            throw MondrianError.partition("Cannot partition empty tree")
         case .cons(_, let parent, _):
 
             let childNodes = transform(parent)
