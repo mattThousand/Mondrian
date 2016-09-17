@@ -19,9 +19,35 @@ class MondrianTests: XCTestCase {
         super.tearDown()
     }
 
+    func testTree() {
+        let emptyTree = Tree<Int>.empty
+        let nonEmptyChildTree = Tree<Int>.cons(Tree.empty, 4, Tree.empty)
+        let treeWithLeafNodes = Tree.cons(nonEmptyChildTree, 4, nonEmptyChildTree)
+
+        XCTAssert(emptyTree.leafNodes.count == 0, "empty tree should have zero leafnodes")
+        XCTAssert(nonEmptyChildTree.leafNodes.count == 1, "tree with empty child nodes should have one leafnodes")
+        XCTAssert(treeWithLeafNodes.leafNodes.count == 2, "tree with nonempty child nodes should have more than one leafnodes")
+    }
+
+    func testPartitionable() {
+
+        let tree = Tree<CGRect>.empty
+
+        XCTAssertThrowsError(try tree.partitioned(usingTransform: { (rect) -> (CGRect, CGRect) in
+            return (rect, rect)
+        }), "attempting to partition an empty tree should throw an error")
+    }
+
     func testCGRect() {
 
         let minRect = CGRect(origin: CGPoint.zero, size: CGSize(width: 10, height: 10))
+
+        let largerRect = CGRect(origin: CGPoint.zero, size: CGSize(width: 50, height: 10))
+
+        let smallerRect = CGRect(origin: CGPoint.zero, size: CGSize(width: 5, height: 10))
+
+        // CGRect should implement Comparable correctly
+        XCTAssert(largerRect > minRect && smallerRect < minRect, "CGRect should implement Comparable correctly")
 
         // Partitioned rect should contain at least multiple sub-rectangles
         XCTAssert(MondrianTests.partitionedRect(minRect: minRect).count > 2, "Partitioned rect should contain at least multiple sub-rectangles")
@@ -41,7 +67,6 @@ class MondrianTests: XCTestCase {
         self.measure {
             let endTime = Date().timeIntervalSince1970
 
-            print(endTime - startTime)
             XCTAssert(endTime - startTime < 1.0, "partitioning shouldn't take too long")
         }
     }
