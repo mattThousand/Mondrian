@@ -27,20 +27,16 @@ public extension Partitionable {
         switch tree {
         case .empty:
             return []
-        case .cons(_, let value, _):
-            if value > minValue {
-                do {
-                    return try tree.partitioned(usingTransform: nodeTransform)
-                        .leafNodes.flatMap({ self.partitioned(withRootValue: $0,
-                                                              minValue: minValue,
-                                                              nodeTransform: nodeTransform) })
-                } catch MondrianError.partition(let errorMessage) {
-                    MondrianError.fail(withErrorMessage: errorMessage)
-                } catch {
-                    MondrianError.fail()
-                }
-            } else {
-                return tree.leafNodes
+        case .cons(_, _, _):
+            do {
+                return try tree.partitioned(usingTransform: nodeTransform)
+                    .leafNodes.flatMap({ $0 > minValue ? self.partitioned(withRootValue: $0,
+                                                          minValue: minValue,
+                        nodeTransform: nodeTransform) : tree.leafNodes })
+            } catch MondrianError.partition(let errorMessage) {
+                MondrianError.fail(withErrorMessage: errorMessage)
+            } catch {
+                MondrianError.fail()
             }
         }
     }
