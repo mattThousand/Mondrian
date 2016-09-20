@@ -1,30 +1,47 @@
-language: swift
-rvm:
-  - 2.2.4
-osx_image: xcode7.3
+env:
+  global:
+    - LC_CTYPE=en_US.UTF-8
+os: osx
+language: c
+matrix:
+  exclude:
+    # Note: Workaround travis-ci/travis-ci#4681
+    # Exclude default job which lacks our included environment variables.
+    - os: osx
+  include:
+    - osx_image: xcode8
+      env:
+        - XCODE_SDK=iphonesimulator
+          XCODE_DESTINATION='platform=iOS Simulator,name=iPhone 6'
+    # - osx_image: xcode8
+    #   env:
+    #     - XCODE_SDK=appletvsimulator
+    #       XCODE_DESTINATION='name=Apple TV 1080p'
+    # - osx_image: xcode8
+    #   env:
+    #     - XCODE_SDK=watchsimulator
+    #       XCODE_DESTINATION='name=Apple Watch - 38mm'
+    # - osx_image: xcode8
+    #   env:
+    #     - JOB=CARTHAGE
+    #   script:
+    #     - brew update 1> /dev/null 2> /dev/null
+    #     - brew outdated carthage || brew upgrade carthage
+    #     - carthage build --no-skip-current
+    #     - for platform in Mac iOS tvOS watchOS; do test -d Carthage/Build/${platform}/Mondrian.framework || exit 1; done
+
+before_install:
+    - export LANG=en_US.UTF-8
+    - source ~/.rvm/scripts/rvm && rvm install ruby-2.2.4 && rvm use 2.2.4
+
 install:
 - gem install xcpretty --no-rdoc --no-ri --no-document --quiet
-- export PYTHONUSERBASE=~/.local
-- easy_install --user scan-build
 - gem install bundler --no-rdoc --no-ri
-- bundle install
+
 script:
-# "warm" iPhone 6 simulator by pre-launching it so tests don't hang
-- export IOS_SIMULATOR_UDID=`instruments -s devices | grep "iPhone 6 (9.3" | awk -F '[\[]' '{print $2}' | awk -F '[\]]' '{print $1}'`
-- open -a "simulator" --args -CurrentDeviceUDID $IOS_SIMULATOR_UDID
-
-# Run tests on iPhone 6 simulator (64-bit)
-- set -o pipefail && xcodebuild test -workspace Example/Mondrian.xcworkspace -scheme Mondrian-Example -destination 'name=iPhone 6' ONLY_ACTIVE_ARCH=NO | xcpretty
-
-# "warm" iPhone 4s simulator
-- export IOS_SIMULATOR_UDID=`instruments -s devices | grep "iPhone 4s (9.3" | awk -F '[\[]' '{print $2}' | awk -F '[\]]' '{print $1}'`
-- open -a "simulator" --args -CurrentDeviceUDID $IOS_SIMULATOR_UDID
-
-# Run tests on iPhone 4s simulator (32-bit)
-- set -o pipefail && xcodebuild test -workspace Example/Mondrian.xcworkspace -scheme Mondrian-Example -destination 'name=iPhone 4s' ONLY_ACTIVE_ARCH=NO | xcpretty
-
-# use scan-build with --status-bugs to fail the build for static analysis warnings per http://jonboydell.blogspot.ca/2013/02/clang-static-analysis.html
-- export PATH="${HOME}/.local/bin:${PATH}"
-- set -o pipefail && scan-build --status-bugs xcodebuild analyze -workspace Example/Mondrian.xcworkspace -scheme Mondrian-Example -destination 'name=iPhone 6' ONLY_ACTIVE_ARCH=NO | xcpretty
-
-- bundle exec pod lib lint
+- set -o pipefail && xcodebuild test
+  -project Mondrian/Mondrian.xcodeproj
+  -scheme Mondrian
+  -sdk ${XCODE_SDK}
+  -destination "${XCODE_DESTINATION}"
+  ONLY_ACTIVE_ARCH=NO | xcpretty

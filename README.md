@@ -1,11 +1,7 @@
 # Mondrian
 A Binary Space Partitioning Framework for iOS.
 
-
-[![BuddyBuild](https://dashboard.buddybuild.com/api/statusImage?appID=5723679e7b69200100ba4c35&branch=master&build=latest)](https://dashboard.buddybuild.com/apps/5723679e7b69200100ba4c35/build/latest)
-[![Version](https://img.shields.io/cocoapods/v/Mondrian.svg?style=flat)](http://cocoapods.org/pods/Mondrian)
-[![License](https://img.shields.io/cocoapods/l/Mondrian.svg?style=flat)](http://cocoapods.org/pods/Mondrian)
-[![Platform](https://img.shields.io/cocoapods/p/Mondrian.svg?style=flat)](http://cocoapods.org/pods/Mondrian)
+[![Build Status](https://travis-ci.org/NiceThings/Mondrian.svg?branch=develop)](https://travis-ci.org/NiceThings/Mondrian)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ----------
@@ -13,6 +9,15 @@ A Binary Space Partitioning Framework for iOS.
 Mondrain is a lightweight framework consisting of a handful of protocols and extensions.
 
 Any type that implements `Partitionable` may pass an instance into the `partitioned` function to return a collection of elements that compose the partitioned instance.
+
+
+## Installation with Carthage
+
+BonMot is compatible with [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
+
+```
+github "NiceThings/Mondrian"
+```
 
 ## Usage
 

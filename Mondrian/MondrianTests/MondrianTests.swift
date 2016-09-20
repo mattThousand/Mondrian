@@ -67,7 +67,7 @@ class MondrianTests: XCTestCase {
         self.measure {
             let endTime = Date().timeIntervalSince1970
 
-            XCTAssert(endTime - startTime < 1.0, "partitioning shouldn't take too long")
+            XCTAssertLessThanOrEqual(endTime - startTime, 6.0, "Partitioning takes too long: \(endTime - startTime)")
         }
     }
     
