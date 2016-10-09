@@ -14,7 +14,7 @@ Any type that implements `Partitionable` may pass an instance into the `partitio
 
 ## Installation with Carthage
 
-BonMot is compatible with [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
+Mondrian is compatible with [Carthage](https://github.com/Carthage/Carthage). To install it, simply add the following line to your Cartfile:
 
 ```
 github "NiceThings/Mondrian"
