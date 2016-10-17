@@ -30,14 +30,4 @@ extension CGRect: Comparable {
 
 extension CGRect: Partitionable {
     public typealias NodeData = CGRect
-
-    public func partitioned(withRootValue rootValue: CGRect, minValue: CGRect) -> [CGRect] {
-        return [CGRect.zero]
-    }
-
-    public func treeRepresentation(withRootValue rootValue: CGRect) -> Tree<CGRect> {
-        return Tree.empty
-    }
 }
-
-
