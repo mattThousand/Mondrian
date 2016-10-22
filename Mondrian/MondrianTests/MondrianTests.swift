@@ -80,7 +80,7 @@ private extension MondrianTests {
         let root = CGRect(origin: CGPoint.zero, size: CGSize(width: 1000, height: 1000))
 
 
-        return CGRect.partitioned(withRootValue: root, minValue: minRect) { (parent) -> (CGRect, CGRect) in
+        return CGRect.partitioned(withRootValue: root, approximateValue: minRect) { (parent) -> (CGRect, CGRect) in
             var c1 = CGRect.zero
             var c2 = CGRect.zero
             var bisectPt: CGFloat = 0.0

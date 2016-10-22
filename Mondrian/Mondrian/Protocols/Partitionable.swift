@@ -8,19 +8,20 @@
 
 import Foundation
 
-public protocol Partitionable: TreeRepresentable {}
+public protocol Partitionable: TreeRepresentable, Comparable {}
 
 public extension Partitionable {
 
     /// Partitions an object recursively until a minimum value is reached by on of the sub-partitions
     ///
     /// - parameter rootValue:     the root or containing value to be partitioned
-    /// - parameter minValue:      the minimum value for an acceptable sub-partition
+    /// - parameter approximateValue:      the minimum value for an acceptable sub-partition
     /// - parameter nodeTransform: a transformation function that accepts a value of the rootValue's type and
     ///    returns a tuple (also of the rootValue's type)
     ///
     /// - returns: a collection of objects no smaller than the minimum value passed in
     public static func partitioned(withRootValue rootValue: NodeData,
+                                   approximateValue: NodeData,
                                    minValue: NodeData,
                                    nodeTransform: @escaping (NodeData) -> (NodeData, NodeData)) -> [NodeData] {
         let tree = treeRepresentation(withRootValue: rootValue)
@@ -30,9 +31,10 @@ public extension Partitionable {
         case .cons(_, _, _):
             do {
                 return try tree.partitioned(usingTransform: nodeTransform)
-                    .leafNodes.flatMap({ $0 > minValue ? self.partitioned(withRootValue: $0,
+                    .leafNodes.flatMap({ $0 > approximateValue ? self.partitioned(withRootValue: $0,
+                                                          approximateValue: approximateValue,
                                                           minValue: minValue,
-                        nodeTransform: nodeTransform) : [$0] })
+                                                          nodeTransform: nodeTransform) : [$0] }).filter({ $0 > minValue })
             } catch MondrianError.partition(let errorMessage) {
                 MondrianError.fail(withErrorMessage: errorMessage)
             } catch {
