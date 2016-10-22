@@ -32,7 +32,7 @@ public extension Partitionable {
                 return try tree.partitioned(usingTransform: nodeTransform)
                     .leafNodes.flatMap({ $0 > minValue ? self.partitioned(withRootValue: $0,
                                                           minValue: minValue,
-                        nodeTransform: nodeTransform) : tree.leafNodes })
+                        nodeTransform: nodeTransform) : [$0] })
             } catch MondrianError.partition(let errorMessage) {
                 MondrianError.fail(withErrorMessage: errorMessage)
             } catch {
