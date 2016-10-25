@@ -27,11 +27,10 @@ final class ViewController: UIViewController {
         let viewRect = view.frame
 
         let tableau1 = CGRect.partitioned(withRootValue: viewRect,
-                                          approximateValue: CGRect(x: 0.0,
+                                          minValue: CGRect(x: 0.0,
                                                            y: 0.0,
-                                                           width: 150.0,
-                                                           height: 150.0),
-                                          minValue: CGRect.zero) { (parent) -> (CGRect, CGRect) in
+                                                           width: 50.0,
+                                                           height: 50.0)) { (parent) -> (CGRect, CGRect) in
             
             var c1 = CGRect.zero
             var c2 = CGRect.zero
