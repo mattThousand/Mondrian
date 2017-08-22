@@ -12,10 +12,10 @@ import Mondrian
 final class ViewController: UIViewController {
 
     let tileColors = [
-        UIColor(colorLiteralRed: 191/255, green: 0.0, blue: 0.0, alpha: 1.0),
-        UIColor(colorLiteralRed: 255/255, green: 247/255, blue: 0.0, alpha: 1.0),
-        UIColor(colorLiteralRed: 228/255, green: 247/255, blue: 247/255, alpha: 1.0),
-        UIColor(colorLiteralRed: 5/255, green: 0.0, blue: 239/255, alpha: 1.0),
+        UIColor(red: 191/255, green: 0.0, blue: 0.0, alpha: 1.0),
+        UIColor(red: 255/255, green: 247/255, blue: 0.0, alpha: 1.0),
+        UIColor(red: 228/255, green: 247/255, blue: 247/255, alpha: 1.0),
+        UIColor(red: 5/255, green: 0.0, blue: 239/255, alpha: 1.0),
         .white
     ]
 
