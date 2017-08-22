@@ -9,10 +9,10 @@ matrix:
     # Exclude default job which lacks our included environment variables.
     - os: osx
   include:
-    - osx_image: xcode8
+    - osx_image: xcode9
       env:
         - XCODE_SDK=iphonesimulator
-          XCODE_DESTINATION='platform=iOS Simulator,name=iPhone 6'
+          XCODE_DESTINATION='platform=IOS Simulator,name=iPhone 7'
     # - osx_image: xcode8
     #   env:
     #     - XCODE_SDK=appletvsimulator
