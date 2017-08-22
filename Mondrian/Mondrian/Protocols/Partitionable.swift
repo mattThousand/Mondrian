@@ -32,7 +32,7 @@ public extension Partitionable {
                 let potentialTree = try tree.partitioned(usingTransform: nodeTransform)
 
                 for leaf in potentialTree.leafNodes {
-                    if leaf < minValue {
+                    if leaf <= minValue {
                         // short circuit
                         return tree.leafNodes
                     }
