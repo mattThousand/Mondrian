@@ -9,23 +9,25 @@
 import Foundation
 import UIKit
 
-extension CGRect: Comparable {
-
-    public static func <(lhs: CGRect, rhs: CGRect) -> Bool {
-        return lhs.width * lhs.height < rhs.width * rhs.height
+extension CGRect: RectRepresentable {
+    var width: Float {
+        get {
+            return Float(size.width)
+        }
+        set {
+            size.width = CGFloat(newValue)
+        }
     }
 
-    public static func <=(lhs: CGRect, rhs: CGRect) -> Bool {
-        return lhs.width * lhs.height <= rhs.width * rhs.height
+    var height: Float {
+        get {
+            return Float(size.height)
+        }
+        set {
+            size.height = CGFloat(newValue)
+        }
     }
 
-    public static func >=(lhs: CGRect, rhs: CGRect) -> Bool {
-        return lhs.width * lhs.height >= rhs.width * rhs.height
-    }
-
-    public static func >(lhs: CGRect, rhs: CGRect) -> Bool {
-        return lhs.width * lhs.height > rhs.width * rhs.height
-    }
 }
 
 extension CGRect: Partitionable {
