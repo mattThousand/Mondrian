@@ -1,0 +1,47 @@
+{
+  "": {
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/master.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Extensions/CGRect+Extensions.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/CGRect+Extensions.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Extensions/CGRect+Extensions.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/CGRect+Extensions~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/CGRect+Extensions.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Sources/Enums/MondrianError.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/MondrianError.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Sources/Enums/MondrianError.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/MondrianError~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/MondrianError.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Sources/Enums/Tree.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Tree.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Sources/Enums/Tree.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Tree~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Tree.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Sources/MondrianCLI/CLI.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/CLI.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Sources/MondrianCLI/CLI.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/CLI~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/CLI.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Sources/MondrianCLI/main.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/main.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Sources/MondrianCLI/main.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/main.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Sources/Protocols/Partitionable.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Partitionable.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Sources/Protocols/Partitionable.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Partitionable~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Partitionable.swiftdeps"
+  },
+  "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/Sources/Protocols/TreeRepresentable.swift": {
+    "dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/TreeRepresentable.d",
+    "object": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/Sources/Protocols/TreeRepresentable.swift.o",
+    "swiftmodule": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/TreeRepresentable~partial.swiftmodule",
+    "swift-dependencies": "/Users/matthewbuckley/NiceThings/Mondrian/Mondrian/Mondrian/.build/x86_64-apple-macosx10.10/debug/Mondrian.build/TreeRepresentable.swiftdeps"
+  }
+}
