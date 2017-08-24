@@ -10,8 +10,11 @@ import Foundation
 
 struct RectType: RectRepresentable {
 
+    var origin: CoordinateType
     var width: Float
     var height: Float
+
+    static var zero = RectType(origin: CoordinateType(x: 0, y: 0), width: 0.0, height: 0.0)
 
     static func ==(lhs: RectType, rhs: RectType) -> Bool {
         return false

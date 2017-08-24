@@ -29,6 +29,8 @@
 		B57288AB1F4E6A26007FA7DB /* TreeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */; };
 		B57288AE1F4E6A7F007FA7DB /* RectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AD1F4E6A7F007FA7DB /* RectType.swift */; };
 		B57288B01F4E6A99007FA7DB /* RectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */; };
+		B57288B11F4E74FE007FA7DB /* RectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AD1F4E6A7F007FA7DB /* RectType.swift */; };
+		B57288B31F4E759E007FA7DB /* CoordinateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288B21F4E759E007FA7DB /* CoordinateType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,7 @@
 		B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeRepresentable.swift; sourceTree = "<group>"; };
 		B57288AD1F4E6A7F007FA7DB /* RectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectType.swift; sourceTree = "<group>"; };
 		B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectRepresentable.swift; sourceTree = "<group>"; };
+		B57288B21F4E759E007FA7DB /* CoordinateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				B57288AD1F4E6A7F007FA7DB /* RectType.swift */,
+				B57288B21F4E759E007FA7DB /* CoordinateType.swift */,
 			);
 			name = Structs;
 			path = MondrianCLI/Sources/Structs;
@@ -442,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B52B190D1F4D26DE004FE56B /* Package.swift in Sources */,
+				B57288B11F4E74FE007FA7DB /* RectType.swift in Sources */,
 				B52B190E1F4D26DE004FE56B /* main.swift in Sources */,
 				B52B19181F4D285C004FE56B /* CLI.swift in Sources */,
 			);
@@ -452,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57288AA1F4E6A26007FA7DB /* Partitionable.swift in Sources */,
+				B57288B31F4E759E007FA7DB /* CoordinateType.swift in Sources */,
 				B57288B01F4E6A99007FA7DB /* RectRepresentable.swift in Sources */,
 				B57288AB1F4E6A26007FA7DB /* TreeRepresentable.swift in Sources */,
 				B57288A91F4E6A26007FA7DB /* Tree.swift in Sources */,
