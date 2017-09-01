@@ -18,8 +18,8 @@ protocol RectRepresentable: Comparable {
 
     static func >(lhs: Self, rhs: Self) -> Bool
 
-    var width: Float { get set }
-    var height: Float { get set }
+    var width: Int { get set }
+    var height: Int { get set }
 
 }
 

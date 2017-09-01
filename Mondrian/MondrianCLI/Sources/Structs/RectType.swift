@@ -11,13 +11,13 @@ import Foundation
 struct RectType: RectRepresentable {
 
     var origin: CoordinateType
-    var width: Float
-    var height: Float
+    var width: Int
+    var height: Int
 
-    static var zero = RectType(origin: CoordinateType(x: 0, y: 0), width: 0.0, height: 0.0)
+    static var zero = RectType(origin: CoordinateType.zero, width: 0, height: 0)
 
     static func ==(lhs: RectType, rhs: RectType) -> Bool {
-        return false
+        return (lhs.height != rhs.height || lhs.width != rhs.width) || (lhs.origin != rhs.origin)
     }
 
 }

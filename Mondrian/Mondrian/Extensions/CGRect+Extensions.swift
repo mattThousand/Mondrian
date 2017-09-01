@@ -10,18 +10,18 @@ import Foundation
 import UIKit
 
 extension CGRect: RectRepresentable {
-    var width: Float {
+    var width: Int {
         get {
-            return Float(size.width)
+            return Int(size.width)
         }
         set {
             size.width = CGFloat(newValue)
         }
     }
 
-    var height: Float {
+    var height: Int {
         get {
-            return Float(size.height)
+            return Int(size.height)
         }
         set {
             size.height = CGFloat(newValue)

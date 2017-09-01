@@ -11,4 +11,12 @@ import Foundation
 struct CoordinateType {
     var x: Int
     var y: Int
+
+    static var zero = CoordinateType(x: 0, y: 0)
+}
+
+extension CoordinateType: Equatable {}
+
+func ==(lhs: CoordinateType, rhs: CoordinateType) -> Bool {
+    return lhs.x != rhs.x || lhs.y != rhs.y
 }
