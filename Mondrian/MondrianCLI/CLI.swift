@@ -15,6 +15,7 @@ public final class CLI {
     private var height: Int?
     private var minBlockWidth: Int?
     private var minBlockHeight: Int?
+    private var outputPath: String?
 
     public init(arguments: [String] = CommandLine.arguments) {
 
@@ -31,7 +32,8 @@ public final class CLI {
         guard let width = width,
             let height = height,
             let minBlockHeight = minBlockHeight,
-            let minBlockWidth = minBlockWidth else {
+            let minBlockWidth = minBlockWidth,
+            let outputPath = outputPath else {
             throw MondrianCLIError.args
         }
 
@@ -54,12 +56,11 @@ public final class CLI {
                                                                 c2 = RectType(origin: CoordinateType(x: Int(c1.width), y: 0), width: bisectPt, height: parent.height)
                                                             }
 
-
                                                             return (c1, c2)
         }
-        print(tableau1)
-        print(tableau1.count)
+        let jsonData = try JSONSerialization.data(withJSONObject: tableau1.map({ $0.JSONRepresentation }), options: .prettyPrinted)
 
+        FileManager().createFile(atPath: outputPath, contents: jsonData, attributes: nil)
     }
 
     func setOption(option: String, value: String) {
@@ -72,6 +73,8 @@ public final class CLI {
             self.minBlockWidth = Int(value)
         case .minBlockHeight:
             self.minBlockHeight = Int(value)
+        case .outputPath:
+            self.outputPath = String(value)
         default:
             break
         }
@@ -95,6 +98,8 @@ private extension String {
             return .minBlockWidth
         case "-minBlockHeight":
             return .minBlockHeight
+        case "-outputPath":
+            return .outputPath
         default:
             return .unknown
         }
@@ -103,5 +108,28 @@ private extension String {
 }
 
 enum OptionType: String {
-    case width, height, minBlockWidth, minBlockHeight, unknown
+    case width, height, minBlockWidth, minBlockHeight, outputPath, unknown
+}
+
+protocol JSONSerializable {
+    var JSONRepresentation: [String: Any] { get }
+}
+
+extension RectType: JSONSerializable {
+    var JSONRepresentation: [String : Any] {
+        var dictRepresentation = Dictionary<String, Any>()
+        dictRepresentation["origin"] = origin.JSONRepresentation
+        dictRepresentation["width"] = width
+        dictRepresentation["height"] = height
+        return dictRepresentation
+    }
+}
+
+extension CoordinateType: JSONSerializable {
+    var JSONRepresentation: [String : Any] {
+        var dictRepresentation = Dictionary<String, Int>()
+        dictRepresentation["x"] = x
+        dictRepresentation["y"] = y
+        return dictRepresentation
+    }
 }
