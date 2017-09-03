@@ -1,7 +1,7 @@
 ## Build generated
 build/
 DerivedData/
-Mondrian/Mondrian/.build
+Mondrian/.build
 
 ## Various settings
 *.pbxuser
