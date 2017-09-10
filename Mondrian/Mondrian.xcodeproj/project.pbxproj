@@ -167,10 +167,11 @@
 			children = (
 				B54567C71D83A22F00C9109D /* Mondrian */,
 				B54ACB111D89D71D00E0B71E /* Mondrian Example */,
-				B54567D21D83A22F00C9109D /* MondrianTests */,
-				B52B18F91F4D255B004FE56B /* MondrianCLI */,
 				B5BBCE321F658F5C00C2BE70 /* MondrianCLI */,
+				B52B18F91F4D255B004FE56B /* MondrianCLI */,
+				B54567D21D83A22F00C9109D /* MondrianTests */,
 				B54567C61D83A22F00C9109D /* Products */,
+				B5BBCE461F65E52200C2BE70 /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -188,9 +189,6 @@
 		B54567C71D83A22F00C9109D /* Mondrian */ = {
 			isa = PBXGroup;
 			children = (
-				B57288AC1F4E6A7F007FA7DB /* Structs */,
-				B57288A21F4E6A26007FA7DB /* Enums */,
-				B57288A51F4E6A26007FA7DB /* Protocols */,
 				B52567A51D88C89300ADF5E5 /* Extensions */,
 				B54567C91D83A22F00C9109D /* Info.plist */,
 				B54567C81D83A22F00C9109D /* Mondrian.h */,
@@ -227,29 +225,29 @@
 				B57288A41F4E6A26007FA7DB /* Tree.swift */,
 			);
 			name = Enums;
-			path = MondrianCLI/Sources/Enums;
-			sourceTree = SOURCE_ROOT;
+			path = Enums;
+			sourceTree = "<group>";
 		};
 		B57288A51F4E6A26007FA7DB /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */,
 				B57288A61F4E6A26007FA7DB /* Partitionable.swift */,
+				B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */,
 				B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */,
 			);
 			name = Protocols;
-			path = MondrianCLI/Sources/Protocols;
-			sourceTree = SOURCE_ROOT;
+			path = Protocols;
+			sourceTree = "<group>";
 		};
 		B57288AC1F4E6A7F007FA7DB /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				B57288AD1F4E6A7F007FA7DB /* RectType.swift */,
 				B57288B21F4E759E007FA7DB /* CoordinateType.swift */,
+				B57288AD1F4E6A7F007FA7DB /* RectType.swift */,
 			);
 			name = Structs;
-			path = MondrianCLI/Sources/Structs;
-			sourceTree = SOURCE_ROOT;
+			path = Structs;
+			sourceTree = "<group>";
 		};
 		B5BBCE321F658F5C00C2BE70 /* MondrianCLI */ = {
 			isa = PBXGroup;
@@ -257,6 +255,16 @@
 				B5BBCE331F658F5C00C2BE70 /* main.swift */,
 			);
 			path = MondrianCLI;
+			sourceTree = "<group>";
+		};
+		B5BBCE461F65E52200C2BE70 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				B57288A21F4E6A26007FA7DB /* Enums */,
+				B57288A51F4E6A26007FA7DB /* Protocols */,
+				B57288AC1F4E6A7F007FA7DB /* Structs */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
