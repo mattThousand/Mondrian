@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B52567A01D88C80100ADF5E5 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B525679F1D88C80100ADF5E5 /* Tree.swift */; };
-		B52567A21D88C83200ADF5E5 /* TreeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52567A11D88C83200ADF5E5 /* TreeRepresentable.swift */; };
 		B54567CF1D83A22F00C9109D /* Mondrian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54567C51D83A22F00C9109D /* Mondrian.framework */; };
 		B54567D41D83A22F00C9109D /* MondrianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54567D31D83A22F00C9109D /* MondrianTests.swift */; };
 		B54567D61D83A22F00C9109D /* Mondrian.h in Headers */ = {isa = PBXBuildFile; fileRef = B54567C81D83A22F00C9109D /* Mondrian.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,8 +18,22 @@
 		B54ACB301D89DC4100E0B71E /* Mondrian.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B54567C51D83A22F00C9109D /* Mondrian.framework */; };
 		B54ACB311D89DC4100E0B71E /* Mondrian.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B54567C51D83A22F00C9109D /* Mondrian.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B556B42F1D88C11A001B6FE2 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B556B42E1D88C11A001B6FE2 /* CGRect+Extensions.swift */; };
-		B574D0CF1D8472F00034D12B /* Partitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B574D0CE1D8472F00034D12B /* Partitionable.swift */; };
-		B5CAAF051D8B630500A2D42F /* MondrianError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CAAF041D8B630500A2D42F /* MondrianError.swift */; };
+		B57288A81F4E6A26007FA7DB /* MondrianError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A31F4E6A26007FA7DB /* MondrianError.swift */; };
+		B57288A91F4E6A26007FA7DB /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A41F4E6A26007FA7DB /* Tree.swift */; };
+		B57288AA1F4E6A26007FA7DB /* Partitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A61F4E6A26007FA7DB /* Partitionable.swift */; };
+		B57288AB1F4E6A26007FA7DB /* TreeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */; };
+		B57288AE1F4E6A7F007FA7DB /* RectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AD1F4E6A7F007FA7DB /* RectType.swift */; };
+		B57288B01F4E6A99007FA7DB /* RectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */; };
+		B57288B31F4E759E007FA7DB /* CoordinateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288B21F4E759E007FA7DB /* CoordinateType.swift */; };
+		B5BBCE341F658F5C00C2BE70 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCE331F658F5C00C2BE70 /* main.swift */; };
+		B5BBCE381F658F8100C2BE70 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52B19171F4D285C004FE56B /* CLI.swift */; };
+		B5BBCE3E1F6591FD00C2BE70 /* RectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AD1F4E6A7F007FA7DB /* RectType.swift */; };
+		B5BBCE3F1F6591FD00C2BE70 /* CoordinateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288B21F4E759E007FA7DB /* CoordinateType.swift */; };
+		B5BBCE401F65920800C2BE70 /* MondrianError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A31F4E6A26007FA7DB /* MondrianError.swift */; };
+		B5BBCE411F65920800C2BE70 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A41F4E6A26007FA7DB /* Tree.swift */; };
+		B5BBCE421F65921000C2BE70 /* RectRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */; };
+		B5BBCE431F65921000C2BE70 /* Partitionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A61F4E6A26007FA7DB /* Partitionable.swift */; };
+		B5BBCE441F65921000C2BE70 /* TreeRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +72,19 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5BBCE2F1F658F5C00C2BE70 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B525679F1D88C80100ADF5E5 /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
-		B52567A11D88C83200ADF5E5 /* TreeRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeRepresentable.swift; sourceTree = "<group>"; };
+		B52B19171F4D285C004FE56B /* CLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
 		B54567C51D83A22F00C9109D /* Mondrian.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mondrian.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54567C81D83A22F00C9109D /* Mondrian.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mondrian.h; sourceTree = "<group>"; };
 		B54567C91D83A22F00C9109D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,8 +99,16 @@
 		B54ACB1C1D89D71D00E0B71E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B54ACB1E1D89D71D00E0B71E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B556B42E1D88C11A001B6FE2 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
-		B574D0CE1D8472F00034D12B /* Partitionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partitionable.swift; sourceTree = "<group>"; };
-		B5CAAF041D8B630500A2D42F /* MondrianError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MondrianError.swift; sourceTree = "<group>"; };
+		B57288A31F4E6A26007FA7DB /* MondrianError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MondrianError.swift; sourceTree = "<group>"; };
+		B57288A41F4E6A26007FA7DB /* Tree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		B57288A61F4E6A26007FA7DB /* Partitionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partitionable.swift; sourceTree = "<group>"; };
+		B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeRepresentable.swift; sourceTree = "<group>"; };
+		B57288AD1F4E6A7F007FA7DB /* RectType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectType.swift; sourceTree = "<group>"; };
+		B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectRepresentable.swift; sourceTree = "<group>"; };
+		B57288B21F4E759E007FA7DB /* CoordinateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateType.swift; sourceTree = "<group>"; };
+		B5BBCE311F658F5C00C2BE70 /* MondrianCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MondrianCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5BBCE331F658F5C00C2BE70 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5BBCE391F658FAD00C2BE70 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,27 +135,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5BBCE2E1F658F5C00C2BE70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B52567A31D88C87D00ADF5E5 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				B574D0CE1D8472F00034D12B /* Partitionable.swift */,
-				B52567A11D88C83200ADF5E5 /* TreeRepresentable.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		B52567A41D88C88700ADF5E5 /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				B5CAAF041D8B630500A2D42F /* MondrianError.swift */,
-				B525679F1D88C80100ADF5E5 /* Tree.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
 		B52567A51D88C89300ADF5E5 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,12 +153,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B52B18F91F4D255B004FE56B /* MondrianCLI */ = {
+			isa = PBXGroup;
+			children = (
+				B52B19171F4D285C004FE56B /* CLI.swift */,
+				B5BBCE391F658FAD00C2BE70 /* main.swift */,
+			);
+			path = MondrianCLI;
+			sourceTree = "<group>";
+		};
 		B54567BB1D83A22F00C9109D = {
 			isa = PBXGroup;
 			children = (
 				B54567C71D83A22F00C9109D /* Mondrian */,
 				B54ACB111D89D71D00E0B71E /* Mondrian Example */,
 				B54567D21D83A22F00C9109D /* MondrianTests */,
+				B52B18F91F4D255B004FE56B /* MondrianCLI */,
+				B5BBCE321F658F5C00C2BE70 /* MondrianCLI */,
 				B54567C61D83A22F00C9109D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,6 +180,7 @@
 				B54567C51D83A22F00C9109D /* Mondrian.framework */,
 				B54567CE1D83A22F00C9109D /* MondrianTests.xctest */,
 				B54ACB101D89D71D00E0B71E /* Mondrian Example.app */,
+				B5BBCE311F658F5C00C2BE70 /* MondrianCLI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,9 +188,10 @@
 		B54567C71D83A22F00C9109D /* Mondrian */ = {
 			isa = PBXGroup;
 			children = (
-				B52567A41D88C88700ADF5E5 /* Enums */,
+				B57288AC1F4E6A7F007FA7DB /* Structs */,
+				B57288A21F4E6A26007FA7DB /* Enums */,
+				B57288A51F4E6A26007FA7DB /* Protocols */,
 				B52567A51D88C89300ADF5E5 /* Extensions */,
-				B52567A31D88C87D00ADF5E5 /* Protocols */,
 				B54567C91D83A22F00C9109D /* Info.plist */,
 				B54567C81D83A22F00C9109D /* Mondrian.h */,
 			);
@@ -188,6 +218,45 @@
 				B54ACB141D89D71D00E0B71E /* ViewController.swift */,
 			);
 			path = "Mondrian Example";
+			sourceTree = "<group>";
+		};
+		B57288A21F4E6A26007FA7DB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				B57288A31F4E6A26007FA7DB /* MondrianError.swift */,
+				B57288A41F4E6A26007FA7DB /* Tree.swift */,
+			);
+			name = Enums;
+			path = MondrianCLI/Sources/Enums;
+			sourceTree = SOURCE_ROOT;
+		};
+		B57288A51F4E6A26007FA7DB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B57288AF1F4E6A99007FA7DB /* RectRepresentable.swift */,
+				B57288A61F4E6A26007FA7DB /* Partitionable.swift */,
+				B57288A71F4E6A26007FA7DB /* TreeRepresentable.swift */,
+			);
+			name = Protocols;
+			path = MondrianCLI/Sources/Protocols;
+			sourceTree = SOURCE_ROOT;
+		};
+		B57288AC1F4E6A7F007FA7DB /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				B57288AD1F4E6A7F007FA7DB /* RectType.swift */,
+				B57288B21F4E759E007FA7DB /* CoordinateType.swift */,
+			);
+			name = Structs;
+			path = MondrianCLI/Sources/Structs;
+			sourceTree = SOURCE_ROOT;
+		};
+		B5BBCE321F658F5C00C2BE70 /* MondrianCLI */ = {
+			isa = PBXGroup;
+			children = (
+				B5BBCE331F658F5C00C2BE70 /* main.swift */,
+			);
+			path = MondrianCLI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,13 +329,30 @@
 			productReference = B54ACB101D89D71D00E0B71E /* Mondrian Example.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B5BBCE301F658F5C00C2BE70 /* MondrianCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5BBCE351F658F5C00C2BE70 /* Build configuration list for PBXNativeTarget "MondrianCLI" */;
+			buildPhases = (
+				B5BBCE2D1F658F5C00C2BE70 /* Sources */,
+				B5BBCE2E1F658F5C00C2BE70 /* Frameworks */,
+				B5BBCE2F1F658F5C00C2BE70 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MondrianCLI;
+			productName = MondrianCLI;
+			productReference = B5BBCE311F658F5C00C2BE70 /* MondrianCLI */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B54567BC1D83A22F00C9109D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Nice Things";
 				TargetAttributes = {
@@ -289,6 +375,10 @@
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
+					B5BBCE301F658F5C00C2BE70 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = 8LHVT7DW44;
+					};
 				};
 			};
 			buildConfigurationList = B54567BF1D83A22F00C9109D /* Build configuration list for PBXProject "Mondrian" */;
@@ -307,6 +397,7 @@
 				B54567C41D83A22F00C9109D /* Mondrian */,
 				B54567CD1D83A22F00C9109D /* MondrianTests */,
 				B54ACB0F1D89D71D00E0B71E /* Mondrian Example */,
+				B5BBCE301F658F5C00C2BE70 /* MondrianCLI */,
 			);
 		};
 /* End PBXProject section */
@@ -343,11 +434,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B52567A01D88C80100ADF5E5 /* Tree.swift in Sources */,
-				B5CAAF051D8B630500A2D42F /* MondrianError.swift in Sources */,
+				B57288AA1F4E6A26007FA7DB /* Partitionable.swift in Sources */,
+				B57288B31F4E759E007FA7DB /* CoordinateType.swift in Sources */,
+				B57288B01F4E6A99007FA7DB /* RectRepresentable.swift in Sources */,
+				B57288AB1F4E6A26007FA7DB /* TreeRepresentable.swift in Sources */,
+				B57288A91F4E6A26007FA7DB /* Tree.swift in Sources */,
+				B57288AE1F4E6A7F007FA7DB /* RectType.swift in Sources */,
+				B57288A81F4E6A26007FA7DB /* MondrianError.swift in Sources */,
 				B556B42F1D88C11A001B6FE2 /* CGRect+Extensions.swift in Sources */,
-				B52567A21D88C83200ADF5E5 /* TreeRepresentable.swift in Sources */,
-				B574D0CF1D8472F00034D12B /* Partitionable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +459,22 @@
 			files = (
 				B54ACB151D89D71D00E0B71E /* ViewController.swift in Sources */,
 				B54ACB131D89D71D00E0B71E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5BBCE2D1F658F5C00C2BE70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5BBCE3E1F6591FD00C2BE70 /* RectType.swift in Sources */,
+				B5BBCE421F65921000C2BE70 /* RectRepresentable.swift in Sources */,
+				B5BBCE401F65920800C2BE70 /* MondrianError.swift in Sources */,
+				B5BBCE3F1F6591FD00C2BE70 /* CoordinateType.swift in Sources */,
+				B5BBCE431F65921000C2BE70 /* Partitionable.swift in Sources */,
+				B5BBCE411F65920800C2BE70 /* Tree.swift in Sources */,
+				B5BBCE441F65921000C2BE70 /* TreeRepresentable.swift in Sources */,
+				B5BBCE381F658F8100C2BE70 /* CLI.swift in Sources */,
+				B5BBCE341F658F5C00C2BE70 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -634,6 +744,38 @@
 			};
 			name = Release;
 		};
+		B5BBCE361F658F5C00C2BE70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 8LHVT7DW44;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		B5BBCE371F658F5C00C2BE70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				DEVELOPMENT_TEAM = 8LHVT7DW44;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -669,6 +811,15 @@
 			buildConfigurations = (
 				B54ACB2A1D89D71E00E0B71E /* Debug */,
 				B54ACB2B1D89D71E00E0B71E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5BBCE351F658F5C00C2BE70 /* Build configuration list for PBXNativeTarget "MondrianCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5BBCE361F658F5C00C2BE70 /* Debug */,
+				B5BBCE371F658F5C00C2BE70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
