@@ -10,7 +10,6 @@ import Foundation
 
 public final class CLI {
 
-    typealias ArgumentPair = (String, String)
     private var width: Int?
     private var height: Int?
     private var minBlockWidth: Int?
@@ -34,7 +33,7 @@ public final class CLI {
             let minBlockHeight = minBlockHeight,
             let minBlockWidth = minBlockWidth,
             let outputPath = outputPath else {
-            throw MondrianCLIError.args
+                throw MondrianCLIError.args
         }
 
         let rootRect = RectType(origin: CoordinateType.zero, width: width, height: height)
@@ -42,22 +41,23 @@ public final class CLI {
         let tableau1 = RectType.partitioned(withRootValue: rootRect,
                                             minValue: RectType(origin: CoordinateType.zero, width: minBlockWidth, height: minBlockHeight)) { (parent) -> (RectType, RectType) in
 
-                                                            var c1 = RectType.zero
-                                                            var c2 = RectType.zero
-                                                            var bisectPt = 0
+                                                var c1 = RectType.zero
+                                                var c2 = RectType.zero
+                                                var bisectPt = 0
 
-                                                            if arc4random() % 2 == 0 {
-                                                                bisectPt = parent.height / Int(arc4random_uniform(4) + 2)
-                                                                c1 = RectType(origin: parent.origin, width: parent.width, height: parent.height - bisectPt)
-                                                                c2 = RectType(origin: CoordinateType(x: 0, y: Int(c1.height)), width: parent.width, height: bisectPt)
-                                                            } else {
-                                                                bisectPt = parent.width / Int(arc4random_uniform(4) + 2)
-                                                                c1 = RectType(origin: parent.origin, width: parent.width - bisectPt, height: parent.height)
-                                                                c2 = RectType(origin: CoordinateType(x: Int(c1.width), y: 0), width: bisectPt, height: parent.height)
-                                                            }
+                                                if arc4random() % 2 == 0 {
+                                                    bisectPt = parent.height / Int(arc4random_uniform(4) + 2)
+                                                    c1 = RectType(origin: parent.origin, width: parent.width, height: parent.height - bisectPt)
+                                                    c2 = RectType(origin: CoordinateType(x: parent.origin.x, y: parent.origin.y + Int(c1.height)), width: parent.width, height: bisectPt)
+                                                } else {
+                                                    bisectPt = parent.width / Int(arc4random_uniform(4) + 2)
+                                                    c1 = RectType(origin: parent.origin, width: parent.width - bisectPt, height: parent.height)
+                                                    c2 = RectType(origin: CoordinateType(x: parent.origin.x + Int(c1.width), y: parent.origin.y), width: bisectPt, height: parent.height)
+                                                }
 
-                                                            return (c1, c2)
+                                                return (c1, c2)
         }
+
         let jsonData = try JSONSerialization.data(withJSONObject: tableau1.map({ $0.JSONRepresentation }), options: .prettyPrinted)
 
         FileManager().createFile(atPath: outputPath, contents: jsonData, attributes: nil)
@@ -133,3 +133,4 @@ extension CoordinateType: JSONSerializable {
         return dictRepresentation
     }
 }
+
