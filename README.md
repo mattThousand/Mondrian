@@ -49,23 +49,23 @@ In the example below, the `CGRect` bisected at a random index, resulting in a sl
 ```swift
 CGRect.partitioned(withRootValue: viewRect, minValue: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0)) { (parent) -> (CGRect, CGRect) in
             
-            var c1 = CGRect.zero
-            var c2 = CGRect.zero
-            var bisectPt: CGFloat = 0.0
-            
-            if arc4random() % 2 == 0 {
-                bisectPt = parent.height / CGFloat(arc4random_uniform(4) + 2)
-                c1 = CGRect(origin: parent.origin, size: CGSize(width: parent.width, height: parent.height - bisectPt))
-                c2 = CGRect(origin: CGPoint(x: c1.minX, y: c1.maxY), size: CGSize(width: parent.width, height: bisectPt))
-            } else {
-                bisectPt = parent.width / CGFloat(arc4random_uniform(4) + 2)
-                c1 = CGRect(origin: parent.origin, size: CGSize(width: parent.width - bisectPt, height: parent.height))
-                c2 = CGRect(origin: CGPoint(x: c1.maxX, y: c1.minY), size: CGSize(width: bisectPt, height: parent.height))
-            }
-            
-            
-            return (c1, c2)
-        }
+    var c1 = CGRect.zero
+    var c2 = CGRect.zero
+    var bisectPt: CGFloat = 0.0
+    
+    if arc4random() % 2 == 0 {
+        bisectPt = parent.height / CGFloat(arc4random_uniform(4) + 2)
+        c1 = CGRect(origin: parent.origin, size: CGSize(width: parent.width, height: parent.height - bisectPt))
+        c2 = CGRect(origin: CGPoint(x: c1.minX, y: c1.maxY), size: CGSize(width: parent.width, height: bisectPt))
+    } else {
+        bisectPt = parent.width / CGFloat(arc4random_uniform(4) + 2)
+        c1 = CGRect(origin: parent.origin, size: CGSize(width: parent.width - bisectPt, height: parent.height))
+        c2 = CGRect(origin: CGPoint(x: c1.maxX, y: c1.minY), size: CGSize(width: bisectPt, height: parent.height))
+    }
+    
+    
+    return (c1, c2)
+}
 ```
 
 <p align="center" >
