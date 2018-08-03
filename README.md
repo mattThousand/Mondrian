@@ -26,7 +26,7 @@ github "NiceThings/Mondrian"
 
 For example, `partitioned` could return a `CGRect` vertically bisected in in chunks no smaller than a rectangle of area `100`:
 
-```
+```swift
         let viewRect = view.frame
 
         CGRect.partitioned(withRootValue: viewRect,
@@ -48,7 +48,7 @@ For example, `partitioned` could return a `CGRect` vertically bisected in in chu
 In the example below, the `CGRect` bisected at a random index, resulting in a slick, Mondrian-esque image.
 
 
-```
+```swift
 CGRect.partitioned(withRootValue: viewRect, minValue: CGRect(x: 0.0, y: 0.0, width: 50.0, height: 50.0)) { (parent) -> (CGRect, CGRect) in
             
             var c1 = CGRect.zero
