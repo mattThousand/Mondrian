@@ -18,8 +18,7 @@ extension CGRect: RectRepresentable {
             size.width = CGFloat(newValue)
         }
     }
-git
-    var height: Int {
+  var height: Int {
         get {
             return Int(size.height)
         }
